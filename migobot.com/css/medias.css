@@ -1,0 +1,53 @@
+﻿
+
+@media screen and (max-width: 480px) {
+        .lifestyle .grid {
+            padding: 0 10px;
+        }
+        .bottom_bike_wrapper {
+            top: calc(15vh) !important;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .features .col {
+            min-width: 100%;
+        }
+
+    /*
+    .tech_specs.first_animation .bike_image {
+        transform: translate3d(20px, -20vh, 0) scale(2);
+    }*/
+        .tech_specs.first_animation .bike_image {
+            transform: translate3d(20px, -40vh, 0) scale(1.5);
+        }
+        .tech_specs .spec {
+            top: 70%;
+        }
+        .tech_specs .standard_content {
+            bottom: 110px;
+        }
+        .tech_specs .display_content {
+            top:50%;
+        }
+        .inner_message {
+            margin-left: 0px !important;
+            background:red;
+            font-size:16px;
+        }
+        /*1 zoom*/
+        .tech_specs.first_animation .image_zoom {
+        -ms-transform: scale(1);
+        transform: scale(2);
+    }
+        /*line*/
+        .tech_specs .logo_and_line.standard {
+            left: calc(47%);
+            height: auto;
+        }
+
+        .tech_specs .line {
+            height: 45px;
+        }
+    }

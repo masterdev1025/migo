@@ -1,0 +1,876 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Homepage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Migo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/assets/favicon/safari-pinned-tab.svg" color="#d5605b">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/medias.css">
+    <link rel="stylesheet" href="~/css/zoom-section.css">
+    <script src="~/Scripts/plugins/gsap/2.0.1/TimelineMax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type='text/javascript' src='/Scripts/modernizr61da.js'></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.zoom-slider').slick({
+                draggable: true,
+
+                arrows: false,
+                dots: true,
+                fade: true,
+                speed: 900,
+                infinite: false,
+                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                touchThreshold: 100
+            });
+            $('.nextSlideBtn').click(function () {
+                $(".zoom-slider").slick('slickNext');
+            });
+            $('.prevSlideBtn').click(function () {
+                $(".zoom-slider").slick('slickPrev');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="journey_sidebar">
+        <div class="inner">
+            <a href="#lifestyle" class="lifestyle_point journey_point">
+                <span class="tooltip">
+                    <spa class="text">
+                        Introdução
+                    </spa>
+                </span>
+                <span class="icon_holder">
+                    <svg role="presentation" class="icon idea"><use xlink:href="#idea" /></svg>
+                </span>
+                <span class="bullet"></span>
+            </a>
+            <a href="#video_section" class="video_section_point journey_point">
+                <span class="tooltip">
+                    <span class="text">
+                        Video Demo
+                    </span>
+                </span>
+                <span class="icon_holder">
+                    <svg role="presentation" class="icon play"><use xlink:href="#play" /></svg>
+                </span>
+                <span class="bullet"></span>
+            </a>
+            <a href="#tech_specs" class="tech_specs_point journey_point">
+                <span class="tooltip">
+                    <span class="text">
+                        MI-GO
+                    </span>
+                </span>
+                <span class="icon_holder">
+                    <svg role="presentation" class="icon box"><use xlink:href="#box" /></svg>
+                </span>
+                <span class="bullet"></span>
+            </a>
+            <a href="#lights_section" class="lights_section_point journey_point">
+                <span class="tooltip">
+                    <span class="text">
+                        Autonomia Curricular
+                    </span>
+                </span>
+                <span class="icon_holder">
+                    <svg role="presentation" class="icon school"><use xlink:href="#school" /></svg>
+                </span>
+                <span class="bullet"></span>
+            </a>
+            <a href="#features" class="features_point journey_point">
+                <span class="tooltip">
+                    <span class="text">
+                        Notícias
+                    </span>
+                </span>
+                <span class="icon_holder">
+                    <svg role="presentation" class="icon news"><use xlink:href="#news" /></svg>
+                </span>
+                <span class="bullet"></span>
+            </a>
+        </div><!-- inner -->
+    </div><!-- journey_sidebar -->
+    <div class="loading_overlay">
+        <div class="logo_pattern logo_hide">
+        </div><!-- logo_pattern -->
+        <div class="content">
+            <div class="logo_hide">
+                <div class="subtitle to_animate" data-animation="fade_in">
+                </div><!-- subtitle -->
+            </div><!-- /.logo_hide -->
+            <div class="centros_logo to_animate" data-animation="fade_in">
+                <img src="~/images/assets/logo.png" style="width:200px;height:auto;" class="icon icon-logo" />
+            </div><!-- centros_logo -->
+            <div class="logo_hide">
+                <div class="by to_animate" data-animation="fade_in">
+                </div>
+            </div><!-- /.logo_hide -->>
+        </div><!-- content -->
+    </div><!-- loading_overlay -->
+    <div class="page_wrapper">
+        <div class="section intro height_section" data-height="200">
+            <div class="trigger" data-trigger="trigger_1" data-top="150" data-class="animated"></div><!-- /.trigger -->
+            <div class="wrapper navigation">
+                <nav class="navbar navbar-expand-lg navbar-light" style="width: 100%;">
+                    <a href="/" class="">
+                        <img src="~/images/assets/logo.png" class="icon icon-logo" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Robot</a>
+                            </li>
+
+                        </ul>
+                        <nav class="social_icons" style="margin:0">
+                            <a href="#" class="social_icon facebook" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Buttons', eventAction: 'Click', eventLabel: 'Facebook' });">
+                                <div class="inner">
+                                    <svg role="presentation" class="icon icon-social_facebook"><use xlink:href="#icon-social_facebook" /></svg>			<span class="visually_hidden">Facebook</span>
+                                </div><!-- inner -->
+                            </a>
+                            <a href="#" class="social_icon twitter" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Buttons', eventAction: 'Click',
+  eventLabel: 'Twitter' });">
+                                <div class="inner">
+                                    <svg role="presentation" class="icon icon-social_twitter"><use xlink:href="#icon-social_twitter" /></svg>			<span class="visually_hidden">Twitter</span>
+                                </div><!-- inner -->
+                            </a>
+                            <a href="#" class="social_icon instagram" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Buttons', eventAction: 'Click', eventLabel: 'Instagram' });">
+                                <div class="inner">
+                                    <svg role="presentation" class="icon icon-social_instagram"><use xlink:href="#icon-social_instagram" /></svg>			<span class="visually_hidden">Instagram</span>
+                                </div><!-- inner -->
+                            </a>
+                        </nav><!-- social_icons -->
+                    </div>
+                </nav>
+            </div><!-- /.wrapper -->
+            <div class="scene height_section" data-height="100">
+                <div class="inner wrapper">
+                    <div class="content">
+                        <div class="heading_animation">
+                            <div class="slide_up">
+                                <div class="inner">
+                                    <h1><span class="coloredWord">MI-GO</span><span class="display_block"> Aprender a programmar brincando.</span></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- content -->
+                </div><!-- inner -->
+                <div class="image">
+                    <img width="1500" height="915" src="~/images/assets/robot_red_prespective.png" class="attachment-feature size-feature" alt="" srcset="~/images/assets/robot_red_prespective.png" sizes="(max-width: 1500px) 100vw, 1500px" />
+                </div><!-- image -->
+            </div><!-- /.scene -->
+        </div><!-- /.section -->
+        <div class="lifestyle" id="lifestyle">
+            <div class="wrapper">
+                <div class="title">
+                    <h2>
+                        O que é o
+                        <span class="coloredWord"> MI-GO</span>
+                        e para que serve
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Ut consectetur bibendum convallis. Donec hendrerit in arcu viverra sodales.
+                        Integer convallis nibh eu mi hendrerit aliquet. Morbi vel auctor est.
+                        Suspendisse vel mattis lorem. Etiam placerat semper orci, id accumsan lacus porttitor eu.
+                        Donec condimentum justo quis pharetra placerat. Aenean eget nisi odio. Fusce vehicula orci sed ultricies dapibus.
+                    </p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="wrapper">
+                    <div class="row first_rows_wrapper">
+                        <span class="line viewport_animate"></span>
+                        <div class="row row_one">
+
+                            <div class="left_image media swipe_image viewport_animate" data-swipe-dimension="width">
+                                <div class="inner">
+                                    <img src="~/images/assets/mansory/programacao_tangivel.jpg" class="bg rellax" data-rellax-speed="-3" data-rellax-percentage="0.5" alt="programacao tangivel" />
+                                </div><!-- inner -->
+                            </div><!-- left_image -->
+
+                            <div class="column_right">
+                                <div class="tagline">
+                                    <div class="heading_animation slide_background viewport_animate">
+                                        <div class="slide slide_up">
+                                            <h3> Programação,</h3>
+                                            <h3> Tangivél </h3>
+                                        </div>
+
+                                    </div>
+                                </div><!-- tagline -->
+                                <div class="content viewport_animate to_transition fade">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Ut consectetur bibendum convallis. Donec hendrerit in arcu viverra sodales.
+                                        Integer convallis nibh eu mi hendrerit aliquet. Morbi vel auctor est. Suspendisse vel mattis lorem.
+                                    </p>
+                                </div><!-- content -->
+                            </div><!-- column_right -->
+                        </div><!-- row -->
+                        <div class="row row_two">
+                            <div class="left_column viewport_animate to_transition fade">
+                                <h3>Pedagogia</h3>
+                                <div class="content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Ut consectetur bibendum convallis.
+                                        Donec hendrerit in arcu viverra sodales.
+                                        Integer convallis nibh eu mi hendrerit aliquet.
+                                        Morbi vel auctor est. Suspendisse vel mattis lorem.
+                                    </p>
+                                </div><!-- content -->
+                            </div><!-- left_column -->
+                            <div class="right_column">
+                                <div class="inner">
+                                    <div class="image media swipe_image viewport_animate" data-swipe-dimension="height" data-swipe="down">
+                                        <div class="inner">
+                                            <img src="~/images/assets/mansory/pedagogia_1.jpg" class="bg" alt="MI-GO" />
+                                        </div><!-- inner -->
+                                    </div><!-- image -->
+                                    <div class="image media swipe_image viewport_animate" data-swipe-dimension="width">
+                                        <div class="inner">
+                                            <img src="~/images/assets/mansory/pedagogia_3.jpg" class="bg rellax" alt="MI-GO" data-rellax-speed="3" data-rellax-percentage="0.5" />
+                                        </div><!-- inner -->
+                                    </div><!-- image -->
+
+
+                                </div><!-- inner -->
+                            </div><!-- right_column -->
+                        </div><!-- row row_two -->
+                    </div><!-- first_rows_wrapper -->
+                </div><!-- wrapper -->
+                <div class="row row_three">
+                    <div class="left_image media swipe_image viewport_animate" data-swipe-dimension="width">
+                        <div class="inner">
+                            <img src="~/images/assets/mansory/ensino_inclusivo.jpg" class="bg rellax" data-rellax-speed="-3" data-rellax-percentage="0.5" alt="MI-GO" />
+                        </div><!-- inner -->
+                    </div><!-- left_image -->
+
+                    <div class="right_column">
+                        <div class="tagline">
+                            <div class="heading_animation slide_background viewport_animate">
+                                <div class="slide slide_up">
+                                    <h3> Ensino </h3>
+                                    <h3>Inclusivo</h3>
+                                </div>
+                            </div>
+                        </div><!-- tagline -->
+                        <div class="content viewport_animate to_transition fade">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Ut consectetur bibendum convallis. Donec hendrerit in arcu viverra sodales.
+                            </p>
+                        </div><!-- content -->
+                    </div><!-- right_column -->
+                    <span class="square viewport_animate" alt=""></span>
+                </div><!-- row row_three -->
+                <div class="row row_four_five_wrapper">
+                    <span class="line viewport_animate"></span>
+                    <div class="row row_four">
+                        <div class="wrapper">
+                            <div class="left_column">
+                                <div class="content viewport_animate to_transition fade">
+                                    <h3>Actividades / Planos de Aula </h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Ut consectetur bibendum convallis. Donec hendrerit in arcu viverra sodales.
+                                    </p>
+                                </div><!-- content -->
+                            </div><!-- left_column -->
+
+                            <div class="right_image media swipe_image viewport_animate" data-swipe-dimension="height" data-swipe="down">
+                                <div class="inner">
+                                    <img src="~/images/assets/mansory/actividades.jpg" class="bg rellax" data-rellax-speed="-1" data-rellax-percentage="0.5" alt="MI-GO" />
+                                </div><!-- inner -->
+                            </div><!-- right_image -->
+
+                        </div><!-- wrapper -->
+                    </div><!-- row row_four -->
+                    <div class="row row_five">
+                        <div class="left_image media swipe_image viewport_animate" data-swipe-dimension="width">
+                            <div class="inner">
+                                <img src="~/images/assets/mansory/100_tangivel.jpg" class="bg rellax" data-rellax-speed="-3" data-rellax-percentage="0.5" alt="MI-GO" />
+                            </div><!-- inner -->
+                        </div><!-- left_image -->
+
+                        <div class="right_column">
+                            <div class="tagline">
+                                <div class="heading_animation slide_background viewport_animate">
+                                    <div class="slide slide_up">
+                                        <h3>100% </h3>
+                                        <h3>Tangível</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content viewport_animate to_transition fade">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Ut consectetur bibendum convallis. Donec hendrerit in arcu viverra sodales.
+                                </p>
+                            </div><!-- content -->
+                        </div><!-- right_column -->
+                    </div><!-- row row_five -->
+                </div><!-- row_four_five_wrapper -->
+
+            </div><!-- grid -->
+            <div class="video_section sidebar_section height_section" id="video_section" data-height="100">
+                <a class="mobile_wrapper" href="https://youtu.be/tHBPGVho_ec" target="_blank">
+                    <img src="~/images/assets/video_placeholder.jpg" alt="" class="bg">
+                    <span class="play_button"></span><!-- /.play_button -->
+                </a><!-- /.mobile_wrapper -->
+                <video class="desktop" playsinline muted loop onplaying="this.controls=false">
+                    <source src="/media/uploads/MI-GO.mp4">
+                    Your browser does not support the video element.
+                </video>
+                <div class="video_controls">
+                    <div class="left">
+                        <span class="current_time">0.00</span>
+                        <span class="duration">
+                        </span>
+                    </div><!-- left -->
+                    <div class="right">
+                        <div class="controls">
+                            <button class="play control">
+                                <span class="tooltip">
+                                    <span class="text">
+                                        Play
+                                    </span>
+                                </span>
+                                <svg role="presentation" class="icon icon-play"><use xlink:href="#icon-play" /></svg>
+                            </button><!-- play -->
+                            <button class="pause control">
+                                <span class="tooltip">
+                                    <span class="text">
+                                        Pause
+                                    </span>
+                                </span>
+                                <svg role="presentation" class="icon icon-pause"><use xlink:href="#icon-pause" /></svg>
+                            </button><!-- pause -->
+                            <button class="volume control">
+                                <span class="tooltip">
+                                    <span class="text unmute">
+                                        Unmute
+                                    </span>
+                                    <span class="text mute">
+                                        Mute
+                                    </span>
+                                </span>
+                                <div class="unmute icon_holder">
+                                    <svg role="presentation" class="icon icon-unmute"><use xlink:href="#icon-unmute" /></svg>
+                                </div><!-- unmute -->
+                                <div class="mute icon_holder">
+                                    <svg role="presentation" class="icon icon-mute"><use xlink:href="#icon-mute" /></svg>
+                                </div><!-- mute -->
+                            </button><!-- volume -->
+                        </div><!-- controls -->
+                    </div><!-- right -->
+                </div><!-- video_controls -->
+                <div class="scrubber">
+                    <div class="line">
+                        <div class="played"></div><!-- played -->
+                    </div><!-- line -->
+                </div><!-- scrubber -->
+            </div><!-- video_section -->
+            <span class="line_divider viewport_animate"></span>
+        </div><!-- /.lifestyle -->
+        <div class="zoom-section">
+                <div class="nextSlideBtn"> <img src = "images/icons/right-arrow.png"/> </div>
+                <div class="prevSlideBtn"> <img src = "images/icons/left-arrow.png" /> </div>
+            <div class="zoom-slider">
+                <div class="item">
+                    <img src="images/zoom/step_1.png" />
+                    <div class="desc-area">
+                        <div class="desc">
+                            <p>
+                                <h2>Passo 2</h2>
+                                <h3 class="coloredWord">2 -Andar 20 centimetros em frente</h3>
+                            <p class="boldWord">Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes</p>
+                            <p>
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/zoom/step_2.png" />
+                    <div class="desc-area">
+                        <div class="desc">
+                            <p>
+                                <h2>Passo 2</h2>
+                                <h3 class="coloredWord">2 -Andar 20 centimetros em frente</h3>
+                            <p class="boldWord">Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes</p>
+                            <p>
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/zoom/step_3.png" />
+                    <div class="desc-area">
+                        <div class="desc">
+                            <p>
+                                <h2>Passo 2</h2>
+                                <h3 class="coloredWord">2 -Andar 20 centimetros em frente</h3>
+                            <p class="boldWord">Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes</p>
+                            <p>
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/zoom/step_4.png" />
+                    <div class="desc-area">
+                        <div class="desc">
+                            <p>
+                                <h2>Passo 2</h2>
+                                <h3 class="coloredWord">2 -Andar 20 centimetros em frente</h3>
+                            <p class="boldWord">Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes</p>
+                            <p>
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                                Sabe o estado has instrucoes , comunica connosco atraves de luzes, indicando se esta tudo correcto on nao com as instrucoes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section lights_section height_section sidebar_section" id="lights_section" data-height="400" data-responsive="true" data-responsive-breakpoint="1050" data-responsive-height="300">
+            <div class="trigger" data-trigger="trigger_1" data-top="200" data-class="animated" data-selector="lights_section" data-responsive="true" data-responsive-breakpoint="1050" data-responsive-top="175"></div><!-- /.trigger -->
+            <div class="scene height_section" data-height="100">
+                <div class="images">
+                    <img src="/images/assets/4block.png" alt="MI-GO" />
+                    <img src="/images/assets/4block_light.png" class="dark" alt="MI-GO" />
+                </div><!-- images -->
+            </div><!-- scene -->
+            <div class="moving wrapper height_section" data-responsive="true" data-responsive-breakpoint="1050" data-responsive-height="100">
+                <div class="sunrise">
+                    <div class="content">
+                        <div class="inner">
+                            <h5>Autonomia</h5>
+                            <h2>Autonomia e <span class="coloredWord"> Flexibilidade Curricular.</span> </h2>
+                            <p>
+                                Aproveite a nova legislação e torne a sua escola reconhecida
+                            </p>
+                            <div class="cta">
+                                <a href="https://www.dge.mec.pt/autonomia-e-flexibilidade-curricular" class="button" target="_blank">
+                                    <p class="text">Ver mais</p>
+                                </a>
+                            </div><!-- cta -->
+                        </div><!-- inner -->
+                    </div><!-- content -->
+                </div><!-- sunrise -->
+                <div class="sunset">
+                    <div class="content">
+                        <div class="inner">
+                            <h5>Tecnologia</h5>
+                            <h2>Capacite <span class="coloredWord"> a sua Escola</span></h2>
+                            <p>
+                                De que forma podemos ajudar?
+                            </p>
+                            <div class="cta">
+                                <a href="#" class="button ghost" target="_blank">
+                                    <p class="text">Quero ser contactado</p>
+                                </a>
+                            </div><!-- cta -->
+                        </div><!-- inner -->
+                    </div><!-- content -->
+                </div><!-- sunset -->
+            </div><!-- moving -->
+        </div><!-- section lights_section -->
+        <div class="features sidebar_section" id="features">
+            <div class="col col-md-6 col-12">
+                <img src="~/images/assets/mansory/bett_2018.jpeg" class="bg" alt="MI-GO" />
+                <div class="content_wrapper">
+                    <div class="inside">
+                        <h3><span class="coloredWord">BETT </span> 2018</h3>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div><!-- content -->
+                    </div><!-- inside -->
+                </div><!-- content_wrapper -->
+            </div><!-- col -->
+
+            <div class="col col-md-6 col-12">
+                <img src="~/images/assets/news_placeholder.jpg" class="bg" alt="MI-GO" />
+                <div class="content_wrapper">
+                    <div class="inside">
+                        <h3><span class="coloredWord">News </span> Example #2</h3>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div><!-- content -->
+                    </div><!-- inside -->
+                </div><!-- content_wrapper -->
+            </div><!-- col -->
+
+            <div class="col col-md-6 col-12">
+                <img src="~/images/assets/news_placeholder.jpg" class="bg" alt="MI-GO" />
+                <div class="content_wrapper">
+                    <div class="inside">
+                        <h3><span class="coloredWord">Case Study </span> Example #1</h3>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div><!-- content -->
+                    </div><!-- inside -->
+                </div><!-- content_wrapper -->
+            </div><!-- col -->
+
+            <div class="col col-md-6 col-12">
+                <img src="~/images/assets/news_placeholder.jpg" class="bg" alt="MI-GO" />
+                <div class="content_wrapper">
+                    <div class="inside">
+                        <h3><span class="coloredWord">Case Study </span> Example #2</h3>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div><!-- content -->
+                    </div><!-- inside -->
+                </div><!-- content_wrapper -->
+            </div><!-- col -->
+
+        </div><!-- features -->
+        <div class="page_cta_section height_section">
+            <div class="wrapper narrow">
+                <div class="center text">
+                    <div class="heading_animation viewport_animate">
+                        <h2> Saiba mais sobre o <span class="coloredWord"> MI-GO</span></h2>
+                    </div>
+                    <div class="button_wrapper">
+                        <a href="#;" class="button cta" target="_blank">
+                            <p class="text">Pedir Demo</p>
+                        </a>
+                        <a href="#;" target="_blank" class="button">
+                            <p class="text">Contactar</p>
+                        </a>
+                    </div><!-- button_wrapper -->
+                </div><!-- center -->
+            </div><!-- wrapper -->
+        </div><!-- page_cta_section -->
+    </div>
+
+    <footer class="footer container">
+        <div class="wrapper">
+            <div class="top">
+
+                <div class="social_footer">
+
+                    <nav class="social_icons">
+                        <a href="#" class="social_icon facebook" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Buttons', eventAction: 'Click', eventLabel: 'Facebook' });">
+                            <div class="inner">
+                                <svg role="presentation" class="icon icon-social_facebook"><use xlink:href="#icon-social_facebook" /></svg>
+                                <span class="visually_hidden">Facebook</span>
+                            </div><!-- inner -->
+                        </a>
+                        <a href="#" class="social_icon twitter" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Buttons', eventAction: 'Click',
+  eventLabel: 'Twitter' });">
+                            <div class="inner">
+                                <svg role="presentation" class="icon icon-social_twitter"><use xlink:href="#icon-social_twitter" /></svg>			<span class="visually_hidden">Twitter</span>
+                            </div><!-- inner -->
+                        </a>
+                        <a href="#" class="social_icon instagram" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Buttons', eventAction: 'Click', eventLabel: 'Instagram' });">
+                            <div class="inner">
+                                <svg role="presentation" class="icon icon-social_instagram"><use xlink:href="#icon-social_instagram" /></svg>			<span class="visually_hidden">Instagram</span>
+                            </div><!-- inner -->
+                        </a>
+                    </nav><!-- social_icons -->
+
+                </div><!-- social_footer -->
+            </div><!-- top -->
+            <div class="links">
+                <div class="link_int">
+                    <a href="#;" class="link link_hover" target="_blank">Sobre o Migo</a> <span class="pipe">|</span>
+                </div><!--link_int-->
+                <div class="link_int">
+                    <a href="#;" class="link link_hover" target="_blank">Termos e Condições</a> <span class="pipe">|</span>
+                </div><!--link_int-->
+
+                <div class="link_int">
+                    <a href="#;" class="link link_hover" target="_blank"> Politica de Privacidade</a> <span class="pipe">|</span>
+                </div><!--link_int-->
+            </div><!-- links -->
+            <div class="bottom">
+                <div class="left">
+                    <div class="credit">
+                        <span class="by_clicky">
+                            Website design and development by
+                            <a href="https://www.double.pt/" target="_blank" class="link_hover">Double Design & Development.</a>
+                        </span>
+                        <span class="copyright">
+                            Copyright <a href="https://www.migo.com" target="_blank" class="link_hover">Migo</a><span class="date"> 2019</span>
+                        </span>
+                        All Rights Reserved
+                        </p>
+                    </div><!-- left -->
+
+                </div><!-- bottom -->
+            </div><!-- wrapper -->
+    </footer>
+    <div class="svg_defs">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs> <path id="sunrise-a" d="M0 0h6v2H0z" /> <path id="sunrise-c" d="M0 0h34v18H0z" />  <path id="unmute-a" d="M0 0h14v19.355H0z" /> </defs>
+            <symbol viewBox="0 0 40.71 21.06" id="icon-arrow_down"><title>arrow_down</title><polygon points="20.35 21.06 0 0.71 0.71 0 20.35 19.65 40 0 40.71 0.71 20.35 21.06" /></symbol>
+            <symbol viewBox="0 0 21.06 40.71" id="icon-arrow_left"><title>arrow_left</title><polygon points="20.35 40.71 0 20.35 20.35 0 21.06 0.71 1.41 20.35 21.06 40 20.35 40.71" /></symbol>
+            <symbol viewBox="0 0 21.06 40.71" id="icon-arrow_right"><title>arrow_right</title><polygon points="0.71 40.71 0 40 19.65 20.35 0 0.71 0.71 0 21.06 20.35 0.71 40.71" /></symbol>
+            <symbol viewBox="0 0 78.1 52.74" id="icon-bike"><title>ranges</title><path d="M61.88,52.74A16.22,16.22,0,1,1,78.1,36.52,16.24,16.24,0,0,1,61.88,52.74Zm0-30.44A14.22,14.22,0,1,0,76.1,36.52,14.24,14.24,0,0,0,61.88,22.29Z" transform="translate(0 0)" /><path d="M16.22,52.74A16.22,16.22,0,1,1,32.44,36.52,16.24,16.24,0,0,1,16.22,52.74Zm0-30.44A14.22,14.22,0,1,0,30.44,36.52,14.24,14.24,0,0,0,16.22,22.29Z" transform="translate(0 0)" /><path d="M38.26,37.52H14.6L27,12.68H58.27Zm-20.42-2H37.3L54.09,14.68H28.25Z" transform="translate(0 0)" /><rect x="30.03" y="4.64" width="2" height="33.3" transform="translate(-5.97 14.42) rotate(-23.93)" /><path d="M60.91,36.76,53,5.09A4.07,4.07,0,0,0,49,2H41.59V0H49a6.06,6.06,0,0,1,5.89,4.6l7.92,31.67Z" transform="translate(0 0)" /><path d="M32.71,7.07h-14a2.27,2.27,0,0,1-2.27-2.27V2.62A2.27,2.27,0,0,1,19.31.42L33.1,3.85a1.63,1.63,0,0,1-.39,3.22Zm-14-4.72a.27.27,0,0,0-.16.06.26.26,0,0,0-.1.21V4.81a.27.27,0,0,0,.27.27h11L18.82,2.36Z" transform="translate(0 0)" /><path d="M32.71,7.07h-14a2.27,2.27,0,0,1-2.27-2.27V2.62A2.27,2.27,0,0,1,19.31.42L33.1,3.85a1.63,1.63,0,0,1-.39,3.22Zm-14-4.72a.27.27,0,0,0-.16.06.26.26,0,0,0-.1.21V4.81a.27.27,0,0,0,.27.27h11L18.82,2.36Z" transform="translate(0 0)" /></symbol>
+            <symbol viewBox="0 0 38 38" id="icon-circle_logo"><title>circle_logo</title> <g fill="none" fill-rule="evenodd"> <path fill="#ed6261" d="M5.19 14.49a13.223 13.223 0 0 1 1.44-3.23A13.668 13.668 0 0 1 8.863 8.53a14.1 14.1 0 0 1 2.895-2.115 15.135 15.135 0 0 1 3.41-1.366 14.649 14.649 0 0 1 3.798-.487c1.972 0 3.823.357 5.553 1.07 1.73.712 3.238 1.678 4.525 2.898a13.728 13.728 0 0 1 3.058 4.287c.467 1.017.788 2.079.965 3.184H38a16.61 16.61 0 0 0-.545-2.649 18.342 18.342 0 0 0-1.93-4.36 17.75 17.75 0 0 0-2.997-3.681 19.673 19.673 0 0 0-3.874-2.84A19.263 19.263 0 0 0 24.092.643 19.922 19.922 0 0 0 19.015 0c-1.772 0-3.472.218-5.102.653a20.288 20.288 0 0 0-4.575 1.83 18.583 18.583 0 0 0-3.873 2.839 18.7 18.7 0 0 0-2.996 3.682 17.503 17.503 0 0 0-1.93 4.335A16.712 16.712 0 0 0 0 16h4.85c.083-.51.192-1.014.34-1.51" /> <g transform="translate(0 20)"> <path fill="#ed6261" d="M32.32 1.936a15.766 15.766 0 0 1-1.424 3.556 14.719 14.719 0 0 1-2.204 3.019 14.276 14.276 0 0 1-2.847 2.326 13.777 13.777 0 0 1-3.368 1.503 13.082 13.082 0 0 1-3.74.536c-1.304 0-2.554-.178-3.75-.536a14.037 14.037 0 0 1-6.229-3.829 14.683 14.683 0 0 1-2.204-3.02A15.743 15.743 0 0 1 5.13 1.937 14.727 14.727 0 0 1 4.813.394H0c.11 1.016.282 2.011.536 2.98A20.506 20.506 0 0 0 2.43 8.13a19.754 19.754 0 0 0 2.948 4.026 19.353 19.353 0 0 0 3.813 3.124 17.956 17.956 0 0 0 4.507 2.013c1.61.47 3.29.706 5.04.706s3.433-.235 5.05-.706a18.415 18.415 0 0 0 4.533-2 18.847 18.847 0 0 0 3.826-3.11 20.212 20.212 0 0 0 2.96-4.026A20.14 20.14 0 0 0 37.553.394h-4.916c-.081.522-.182 1.038-.317 1.542" /> </g> </g> </symbol>
+            <symbol viewBox="0 0 53.4 53.4" id="icon-clicky_logo"><title>clicky_logo</title><path d="M27.2,53.7A26.7,26.7,0,0,1,8.32,8.12,26.7,26.7,0,0,1,46.08,45.88,26.54,26.54,0,0,1,27.2,53.7Zm0-48.21A21.51,21.51,0,1,0,48.71,27,21.54,21.54,0,0,0,27.2,5.49Z" transform="translate(-0.5 -0.3)" /><path d="M27.2,43.51A16.51,16.51,0,1,1,43.71,27,16.53,16.53,0,0,1,27.2,43.51Zm0-27.82A11.31,11.31,0,1,0,38.51,27,11.32,11.32,0,0,0,27.2,15.69Z" transform="translate(-0.5 -0.3)" /><circle cx="26.7" cy="26.7" r="6.37" /></symbol>
+            <symbol viewBox="0 0 62 62" id="icon-cog"><title>cog</title><path d="M54.9,24a2.89,2.89,0,0,1-2.1-4.9l5-5L47.9,4.2l-5,5a2.83,2.83,0,0,1-3.2.6A3,3,0,0,1,38,7.1V0H24V7.1a2.89,2.89,0,0,1-4.9,2.1l-5-5L4.2,14.1l5,5a2.87,2.87,0,0,1,.6,3.2A3,3,0,0,1,7.1,24H0V38H7.1a2.89,2.89,0,0,1,2.1,4.9l-5,5,9.9,9.9,5-5a2.95,2.95,0,0,1,5,2V62h14V54.9A2.89,2.89,0,0,1,43,52.8l4.3,4.3a1,1,0,0,0,1.4,0l9.2-9.2-5-5a2.87,2.87,0,0,1-.6-3.2,2.8,2.8,0,0,1,2.6-1.8H62V24ZM34.84,39.22A9.11,9.11,0,0,1,22.78,27.16a8,8,0,0,1,4.38-4.38A9.11,9.11,0,0,1,39.22,34.84,8,8,0,0,1,34.84,39.22Z" /></symbol>
+            <symbol viewBox="0 0 28.71 28.71" id="icon-cross"><title>cross</title><line x1="28.35" y1="0.35" x2="0.35" y2="28.35" /><rect x="-4.4" y="14.9" width="39.6" height="1" transform="translate(-7.43 14.35) rotate(-45)" /><line x1="28.35" y1="28.35" x2="0.35" y2="0.35" /><rect x="14.9" y="-4.4" width="1" height="39.6" transform="translate(-7.43 14.35) rotate(-45)" /></symbol>
+            <symbol viewBox="0 0 48 48" id="icon-mute">
+                <title>mute</title>
+                <g transform="translate(0, 0)">
+                    <path d="M3,34h7.924L38,14.37V4c0-0.371-0.206-0.712-0.534-0.885c-0.329-0.173-0.727-0.149-1.032,0.061L20.689,14H3
+	                         c-0.553,0-1,0.447-1,1v18C2,33.553,2.447,34,3,34z" />
+                    <path d="M20.923,34.161l15.51,10.663C36.604,44.94,36.802,45,37,45c0.159,0,0.319-0.038,0.466-0.115
+                         	C37.794,44.712,38,44.371,38,44V21.78L20.923,34.161z" />
+                    <path data-color="color-2" d="M5.001,43c-0.31,0-0.615-0.144-0.811-0.413c-0.324-0.447-0.225-1.072,0.223-1.396l40-29
+	                                              c0.449-0.325,1.073-0.224,1.396,0.223c0.324,0.447,0.225,1.072-0.223,1.396l-40,29C5.409,42.938,5.204,43,5.001,43z" />
+                </g>
+            </symbol>
+            <symbol viewBox="0 0 12 14" id="icon-pause"><title>pause</title> <g> <path d="M0,14h4V0H0V14z M8,0v14h4V0H8z" /> </g> </symbol>
+
+
+            <symbol viewBox="0 0 13.94 30" id="icon-social_facebook"><title>Facebook</title>  <path class="cls-1" d="M3,30H9.19V15h4.2l.54-5.3H9.19V6.6a1.27,1.27,0,0,1,1.32-1.44h3.35V0L9.25,0C4.13,0,3,3.83,3,6.29V9.71H0V15H3Z" /> </symbol>
+            <symbol viewBox="0 0 40.35 25.68" id="icon-social_googleplus"><title>Google Plus</title>  <g> <path class="cls-1" d="M12.82,10.3v5.08h6.93c-1.09,3.3-2.77,5.09-6.93,5.09a7.51,7.51,0,0,1-7.49-7.63,7.51,7.51,0,0,1,7.49-7.63,7.25,7.25,0,0,1,5,1.87c1.05-1.06,1-1.21,3.65-3.74a12.83,12.83,0,1,0-8.62,22.34C23.4,25.68,26,16.45,25.13,10.3Z" /> <polygon class="cls-1" points="35.91 10.55 35.91 6.1 32.74 6.1 32.74 10.55 28.17 10.55 28.17 13.73 32.74 13.73 32.74 18.31 35.91 18.31 35.91 13.73 40.35 13.73 40.35 10.55 35.91 10.55" /> </g> </symbol>
+            <symbol viewBox="0 0 32 32" id="icon-social_instagram"><title>Instagram</title>  <path class="cls-1" d="M24,10.88c4.27,0,4.78,0,6.47.09a6.85,6.85,0,0,1,4.81,1.75A6.85,6.85,0,0,1,37,17.53c.08,1.69.09,2.19.09,6.47s0,4.78-.09,6.47a6.85,6.85,0,0,1-1.75,4.81A6.85,6.85,0,0,1,30.47,37c-1.69.08-2.19.09-6.47.09s-4.78,0-6.47-.09a6.85,6.85,0,0,1-4.81-1.75A6.85,6.85,0,0,1,11,30.47c-.08-1.69-.09-2.19-.09-6.47s0-4.78.09-6.47a6.85,6.85,0,0,1,1.75-4.81A6.85,6.85,0,0,1,17.53,11c1.69-.08,2.19-.09,6.47-.09M24,8c-4.34,0-4.89,0-6.6.1a9.57,9.57,0,0,0-6.72,2.59A9.56,9.56,0,0,0,8.1,17.4C8,19.11,8,19.66,8,24s0,4.89.1,6.6a9.57,9.57,0,0,0,2.59,6.72A9.56,9.56,0,0,0,17.4,39.9c1.71.08,2.25.1,6.6.1s4.89,0,6.6-.1a9.57,9.57,0,0,0,6.72-2.59A9.56,9.56,0,0,0,39.9,30.6c.08-1.71.1-2.25.1-6.6s0-4.89-.1-6.6a9.57,9.57,0,0,0-2.59-6.72A9.56,9.56,0,0,0,30.6,8.1C28.89,8,28.34,8,24,8Z" transform="translate(-8 -8)" /> <path class="cls-1" d="M24,15.78A8.22,8.22,0,1,0,32.22,24,8.22,8.22,0,0,0,24,15.78Zm0,13.55A5.33,5.33,0,1,1,29.33,24,5.33,5.33,0,0,1,24,29.33Z" transform="translate(-8 -8)" /> <circle class="cls-1" cx="24.54" cy="7.46" r="1.92" /> </symbol>
+            <symbol viewBox="0 0 30 29.95" id="icon-social_linkedin"><title>LinkedIn</title>  <g> <rect class="cls-1" x="0.49" y="9.95" width="6.22" height="20" /> <circle class="cls-1" cx="3.6" cy="3.61" r="3.6" /> <path class="cls-1" d="M30,19c0-5.39-1.16-9.53-7.45-9.53a6.54,6.54,0,0,0-5.88,3.23h-.09V9.95h-6v20h6.22v-9.9c0-2.61.49-5.14,3.73-5.14s3.23,3,3.23,5.3v9.73H30Z" /> </g> </symbol>
+            <symbol viewBox="0 0 23.2 30" id="icon-social_pinterest">
+                <title>Pinterest</title>
+                <path d="M5,29.8c0,0.2,0.3,0.3,0.4,0.1c0.2-0.2,2.4-2.9,3.1-5.6c0.2-0.8,1.2-4.7,1.2-4.7c0.6,1.1,2.3,2.1,4.2,2.1
+		                c5.5,0,9.3-5,9.3-11.8c0-5.1-4.3-9.9-10.9-9.9C4.1,0,0,5.9,0,10.8c0,3,1.1,5.6,3.5,6.6c0.4,0.2,0.8,0,0.9-0.4
+		                c0.1-0.3,0.3-1.1,0.4-1.4c0.1-0.4,0.1-0.6-0.2-1c-0.7-0.8-1.1-1.9-1.1-3.4c0-4.4,3.3-8.3,8.5-8.3c4.6,0,7.2,2.8,7.2,6.6
+		                c0,5-2.2,9.2-5.5,9.2c-1.8,0-3.2-1.5-2.7-3.3c0.5-2.2,1.5-4.5,1.5-6.1c0-1.4-0.8-2.6-2.3-2.6c-1.8,0-3.3,1.9-3.3,4.5
+		                c0,1.6,0.6,2.7,0.6,2.7s-1.9,8-2.2,9.4C4.4,26.1,4.9,29.5,5,29.8z" />
+            </symbol>
+            <symbol viewBox="0 0 30 24.38" id="icon-social_twitter"><title>Twitter</title>  <path class="cls-1" d="M29.17.45a12.32,12.32,0,0,1-3.91,1.5A6.16,6.16,0,0,0,14.62,6.16a6.26,6.26,0,0,0,.16,1.4A17.47,17.47,0,0,1,2.09,1.13,6.16,6.16,0,0,0,4,9.34a6.12,6.12,0,0,1-2.79-.77v.08a6.16,6.16,0,0,0,4.94,6,6.14,6.14,0,0,1-2.78.11,6.16,6.16,0,0,0,5.75,4.28A12.35,12.35,0,0,1,1.47,21.7,12.56,12.56,0,0,1,0,21.62a17.42,17.42,0,0,0,9.43,2.76c11.32,0,17.51-9.38,17.51-17.51,0-.27,0-.53,0-.8A12.48,12.48,0,0,0,30,2.89a12.25,12.25,0,0,1-3.53,1A6.17,6.17,0,0,0,29.17.45Z" /> </symbol>
+            <symbol viewBox="0 0 30 29.34" id="icon-social_youtube"><title>YouTube</title>  <g> <path class="cls-1" d="M24.52,14h-19A5.48,5.48,0,0,0,0,19.46v4.4a5.48,5.48,0,0,0,5.48,5.48h19A5.48,5.48,0,0,0,30,23.86v-4.4A5.48,5.48,0,0,0,24.52,14Zm-15,3.43H7.71V26.2H6V17.41H4.23v-1.5H9.48Zm5,8.79H13v-.83a3.21,3.21,0,0,1-.87.7,1.83,1.83,0,0,1-.88.24.94.94,0,0,1-.79-.34,1.64,1.64,0,0,1-.27-1V18.61h1.52v5.83a.65.65,0,0,0,.09.39.37.37,0,0,0,.31.12.87.87,0,0,0,.42-.16,2.06,2.06,0,0,0,.47-.41V18.61h1.52ZM20,24.63a1.89,1.89,0,0,1-.36,1.24,1.26,1.26,0,0,1-1,.43,1.81,1.81,0,0,1-.79-.17,2,2,0,0,1-.65-.51v.58H15.62V15.91h1.53v3.31a2.37,2.37,0,0,1,.65-.53,1.48,1.48,0,0,1,.7-.18,1.31,1.31,0,0,1,1.1.48A2.26,2.26,0,0,1,20,20.42Zm5.26-2h-2.9V24a1.65,1.65,0,0,0,.15.83.56.56,0,0,0,.52.23.63.63,0,0,0,.53-.2,1.64,1.64,0,0,0,.15-.87v-.35h1.56v.39a2.43,2.43,0,0,1-.57,1.76,2.26,2.26,0,0,1-1.7.59,2.09,2.09,0,0,1-1.61-.63,2.42,2.42,0,0,1-.59-1.72V20.65A2.14,2.14,0,0,1,21.43,19a2.28,2.28,0,0,1,1.66-.62,2.13,2.13,0,0,1,1.6.58,2.28,2.28,0,0,1,.56,1.66Z" /> <path class="cls-1" d="M23,19.75a.6.6,0,0,0-.52.21,1.11,1.11,0,0,0-.16.68v.77h1.34v-.77a1.12,1.12,0,0,0-.16-.68A.58.58,0,0,0,23,19.75Z" /> <path class="cls-1" d="M17.79,19.72a.75.75,0,0,0-.32.07,1.11,1.11,0,0,0-.31.23v4.73a1.34,1.34,0,0,0,.36.27.9.9,0,0,0,.37.08.5.5,0,0,0,.41-.16.84.84,0,0,0,.13-.52V20.5a.92.92,0,0,0-.16-.58A.59.59,0,0,0,17.79,19.72Z" /> <polygon class="cls-1" points="5.68 0 7.97 6.85 7.97 11.34 9.9 11.34 9.9 6.63 12.14 0 10.18 0 8.99 4.53 8.87 4.53 7.62 0 5.68 0" /> <path class="cls-1" d="M13,3.34a1.92,1.92,0,0,0-.69,1.55V9.22a2.22,2.22,0,0,0,.67,1.7,2.53,2.53,0,0,0,1.8.63,2.61,2.61,0,0,0,1.83-.61,2.19,2.19,0,0,0,.66-1.68V4.94a2,2,0,0,0-.68-1.57,2.52,2.52,0,0,0-1.74-.61A2.81,2.81,0,0,0,13,3.34Zm2.53,1.48V9.38a.7.7,0,0,1-.21.53.78.78,0,0,1-.55.19.68.68,0,0,1-.52-.19A.73.73,0,0,1,14,9.38V4.82a.57.57,0,0,1,.19-.44.76.76,0,0,1,.51-.17.84.84,0,0,1,.55.17A.55.55,0,0,1,15.49,4.82Z" /> <path class="cls-1" d="M23.5,11.34V3H21.79V9.32a2.33,2.33,0,0,1-.53.45,1,1,0,0,1-.48.18.41.41,0,0,1-.35-.13.69.69,0,0,1-.11-.43V3H18.62v7a1.76,1.76,0,0,0,.3,1.12,1.08,1.08,0,0,0,.89.38,2.14,2.14,0,0,0,1-.27,3.61,3.61,0,0,0,1-.78v.93Z" /> </g> </symbol>
+            <symbol viewBox="0 0 63 32" id="icon-sunrise"><title>sunrise</title>  <g fill="none" fill-rule="evenodd"> <path fill="#C0C0C0" d="M5.2 30h-4c-.6 0-1 .399-1 1 0 .6.4 1 1 1h4c.6 0 1-.4 1-1 0-.601-.4-1-1-1M12.1 13.3c.2.2.5.3.7.3.2 0 .5-.1.7-.3.4-.4.4-1 0-1.4l-2.8-2.8c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l2.8 2.8zM31.2 6c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1s-1 .4-1 1v4c0 .6.4 1 1 1M49.6 13.6c.3 0 .5-.1.7-.3l2.8-2.8c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0l-2.8 2.8c-.4.4-.4 1 0 1.4.2.2.4.3.7.3" /> <g transform="translate(56.2 30)"> <mask id="sunrise-b" fill="#fff"> <use xlink:href="#sunrise-a" /> </mask> <path fill="#C0C0C0" d="M5 0H1C.4 0 0 .4 0 1s.4 1 1 1h4c.6 0 1-.4 1-1s-.4-1-1-1" mask="url(#sunrise-b)" /> </g> <g transform="translate(14.2 14)"> <mask id="sunrise-d" fill="#fff"> <use xlink:href="#sunrise-c" /> </mask> <path fill="#C0C0C0" d="M1 18h32c.6 0 1-.4 1-1v-.2C33.9 7.5 26.3 0 17 0 7.6 0 0 7.6 0 17c0 .6.4 1 1 1" mask="url(#sunrise-d)" /> </g> </g> </symbol>
+            <symbol viewBox="0 0 33 33" id="icon-sunset"><title>sunset</title> <path fill="#C0C0C0" fill-rule="evenodd" d="M32.765 19.86a.804.804 0 0 0-.776-.206c-1.342.367-2.69.553-4.005.553-8.377 0-15.191-6.815-15.191-15.191 0-1.317.185-2.665.552-4.006a.798.798 0 0 0-.982-.982C5.083 2.016 0 8.67 0 16.21 0 25.468 7.532 33 16.79 33c7.54 0 14.193-5.084 16.182-12.363a.799.799 0 0 0-.207-.777" /> </symbol>
+            <symbol viewBox="0 0 22 16" id="icon-unmute"><title>unmute</title>  <g fill="none" fill-rule="evenodd"> <g transform="translate(-3 -2)"> <mask id="unmute-b" fill="#fff"> <use xlink:href="#unmute-a" /> </mask> <path fill="#FFF" d="M16.804.035a.355.355 0 0 0-.369.037L8.83 5.875H3.35a.347.347 0 0 0-.35.346v6.912c0 .191.156.346.35.346h5.48l7.605 5.803a.353.353 0 0 0 .369.036.344.344 0 0 0 .196-.31V.346a.344.344 0 0 0-.196-.31" mask="url(#unmute-b)" /> </g> <path fill="#FFF" d="M21.7 7h-2.4c-.166 0-.3.223-.3.5s.134.5.3.5h2.4c.166 0 .3-.223.3-.5s-.134-.5-.3-.5M17.336 3a.333.333 0 0 0 .168-.045l2.328-1.333a.332.332 0 0 0 .123-.455.337.337 0 0 0-.459-.122l-2.328 1.333a.331.331 0 0 0-.123.455.335.335 0 0 0 .291.167M19.832 13.378l-2.328-1.334a.338.338 0 0 0-.459.122.332.332 0 0 0 .123.456l2.328 1.333a.335.335 0 0 0 .459-.122.331.331 0 0 0-.123-.455" /> </g> </symbol>
+            <!--Added-->
+            <!--box migo-->
+            <symbol viewBox="0 0 401.998 401.998" id="box">
+                <title>MI-GO</title>
+                <g>
+                    <path d="M377.87,24.126C361.786,8.042,342.417,0,319.769,0H82.227C59.579,0,40.211,8.042,24.125,24.126
+		                    C8.044,40.212,0.002,59.576,0.002,82.228v237.543c0,22.647,8.042,42.014,24.123,58.101c16.086,16.085,35.454,24.127,58.102,24.127
+		                    h237.542c22.648,0,42.011-8.042,58.102-24.127c16.085-16.087,24.126-35.453,24.126-58.101V82.228
+		                    C401.993,59.58,393.951,40.212,377.87,24.126z M365.448,319.771c0,12.559-4.47,23.314-13.415,32.264
+		                    c-8.945,8.945-19.698,13.411-32.265,13.411H82.227c-12.563,0-23.317-4.466-32.264-13.411c-8.945-8.949-13.418-19.705-13.418-32.264
+		                    V82.228c0-12.562,4.473-23.316,13.418-32.264c8.947-8.946,19.701-13.418,32.264-13.418h237.542
+		                    c12.566,0,23.319,4.473,32.265,13.418c8.945,8.947,13.415,19.701,13.415,32.264V319.771L365.448,319.771z" />
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+            </symbol>
+            <!--play-->
+            <symbol viewBox="0 -71 511.99921 511" id="play">
+                <path d="m255.980469 370.492188c-.042969 0-.089844 0-.136719 0-15.449219-.105469-152.027344-1.351563-190.722656-11.816407-27.042969-7.269531-48.390625-28.59375-55.679688-55.640625-10.125-38.011718-9.4804685-111.195312-9.410156-117.039062-.0664062-5.816406-.71875-79.605469 9.378906-117.929688.011719-.035156.019532-.074218.03125-.109375 7.207032-26.738281 29.035156-48.722656 55.613282-56.011719.066406-.019531.136718-.035156.203124-.054687 38.257813-10.054687 175.105469-11.285156 190.585938-11.390625h.277344c15.488281.105469 152.429687 1.351562 190.769531 11.832031 26.992187 7.257813 48.339844 28.578125 55.628906 55.625 10.492188 38.277344 9.511719 112.269531 9.410157 118.480469.015624 1.375.066406 6.988281-.023438 15.273438-.121094 10.972656-9.050781 19.785156-19.996094 19.785156-.074218 0-.144531 0-.21875-.003906-11.046875-.117188-19.902344-9.167969-19.785156-20.210938.097656-8.859375.023438-14.574219.023438-14.632812-.003907-.207032 0-.417969 0-.628907.367187-20.445312-.351563-79.636719-8.007813-107.570312-3.617187-13.410157-14.144531-23.921875-27.5-27.511719-28.269531-7.730469-139.691406-10.152344-180.441406-10.4375-40.738281.285156-152.03125 2.644531-180.457031 10.050781-13.097657 3.632813-23.863282 14.519531-27.453126 27.773438-8.890624 33.828125-8.050781 106.679687-8.042968 107.410156v.527344c-.265625 20.203125.667968 78.710937 8.046875 106.421875 3.578125 13.269531 14.105469 23.78125 27.457031 27.375 28.550781 7.722656 139.789062 10.148437 180.445312 10.433594 40.761719-.285157 152.164063-2.644532 180.503907-10.0625 13.324219-3.605469 23.828125-14.105469 27.417969-27.417969 2.875-10.664063 13.851562-16.980469 24.515624-14.101563 10.664063 2.875 16.980469 13.847656 14.105469 24.515625-7.292969 27.042969-28.636719 48.367188-55.710937 55.648438-.035156.007812-.074219.019531-.109375.027343-38.253907 10.054688-175.105469 11.285157-190.582031 11.390626-.042969 0-.089844 0-.136719 0zm-22.640625-110.523438 102.160156-58.972656c5.875-3.394532 9.5-9.6875 9.5-16.5s-3.625-13.105469-9.5-16.5l-102.160156-58.972656c-5.855469-3.378907-13.058594-3.367188-18.898438.035156-5.84375 3.398437-9.441406 9.671875-9.441406 16.460937v117.949219c0 6.789062 3.597656 13.0625 9.441406 16.464844 2.929688 1.707031 6.203125 2.5625 9.476563 2.5625 3.253906 0 6.503906-.84375 9.421875-2.527344zm0 0" />
+            </symbol>
+            <!--intro-->
+            <symbol viewBox="0 0 511.999 511.999" id="idea">
+                <g>
+                    <g>
+                        <path d="M360.819,34.266c-60.848-45.895-150.896-46.233-212.451,2.289c-82.192,64.789-95.816,198.164-4.023,273.583v88.229
+			                    c0,23.72,18.219,46.42,48.59,46.42c0,43.188,31.195,67.212,63.025,67.212c31.692,0,63.024-23.83,63.024-67.212
+			                    c29.847,0,48.59-22.204,48.59-46.42v-88.228C460.499,233.814,445.52,98.154,360.819,34.266z M255.961,476.284
+			                    c-13.6,0-27.31-9.357-27.31-31.497h54.619C283.269,465.81,270.635,476.284,255.961,476.284z M331.861,398.367
+			                    c-0.001,5.902-4.802,10.705-10.705,10.705c-14.878,0-116.535,0-130.39,0c-5.903,0-10.705-4.801-10.705-10.705v-20.773h151.8
+			                    V398.367z M339.06,287.111c-4.53,3.37-7.199,8.684-7.199,14.329v40.44h-58.042V258.51l43.382-75.141
+			                    c4.931-8.541,2.005-19.462-6.536-24.393c-8.542-4.931-19.464-2.005-24.393,6.536l-30.309,52.499l-30.31-52.499
+			                    c-4.93-8.541-15.853-11.467-24.393-6.536c-8.541,4.932-11.467,15.853-6.536,24.393l43.382,75.141v83.371h-58.042v-40.44
+			                    c0-5.645-2.67-10.959-7.199-14.329c-80.441-59.835-68.482-170.404-2.382-222.508c48.157-37.963,120.495-38.283,168.833-1.824
+			                    C407.271,114.039,420.593,226.465,339.06,287.111z" />
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+            </symbol>
+            <!--news-->
+            <symbol viewBox="0 0 512 512" id="news">
+                <g>
+                    <g>
+                        <path d="M351.028,144.402H223.873c-11.207,0-20.291,9.083-20.291,20.291c0,11.207,9.083,20.291,20.291,20.291h127.155
+			                    c11.214,0,20.291-9.083,20.291-20.291C371.318,153.485,362.235,144.402,351.028,144.402z" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M399.725,242.473H223.873c-11.207,0-20.291,9.083-20.291,20.291c0,11.207,9.083,20.291,20.291,20.291h175.852
+			                    c11.207,0,20.291-9.083,20.291-20.291C420.016,251.556,410.932,242.473,399.725,242.473z" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M491.709,17.247H132.565c-11.207,0-20.291,9.083-20.291,20.291v191.408H76.428C34.284,228.946,0,263.237,0,305.374
+			                    v112.951c0,42.144,34.284,76.428,76.428,76.428c3.449,0,6.845-0.23,10.166-0.676h334.775c49.969,0,90.631-40.656,90.631-90.631
+			                    V37.538C512,26.33,502.917,17.247,491.709,17.247z M112.275,418.325c0,17.389-12.452,31.931-28.907,35.17h-6.939v0.676
+			                    c-19.77,0-35.847-16.084-35.847-35.847V305.374c0-19.763,16.084-35.847,35.847-35.847h35.847V418.325z M471.419,403.445
+			                    c0,27.129-22.915,50.05-50.05,50.05H144.273c5.485-10.531,8.583-22.496,8.583-35.17V57.828h318.563V403.445z" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path d="M351.028,334.464H223.873c-11.207,0-20.291,9.083-20.291,20.291c0,11.207,9.083,20.291,20.291,20.291h127.155
+		                    	c11.214,0,20.291-9.083,20.291-20.291C371.318,343.547,362.235,334.464,351.028,334.464z" />
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+            </symbol>
+            <!--school-->
+            <symbol viewBox="1 -17 511.99926 511" id="school">
+                <path d="m504.035156 4.523438c-5.019531-3.777344-11.519531-4.980469-17.554687-3.246094-23.167969 6.652344-52.695313 4.773437-90.078125 2.398437-23.40625-1.488281-49.933594-3.175781-80.402344-3.175781-23.875 0-45.328125 10.527344-60 27.167969-14.671875-16.640625-36.121094-27.167969-60-27.167969-30.464844 0-56.996094 1.6875-80.402344 3.175781-37.382812 2.378907-66.910156 4.257813-90.078125-2.398437-6.035156-1.734375-12.535156-.53125-17.550781 3.246094-5.019531 3.78125-7.96875 9.695312-7.96875 15.976562v331.796875c-.0546875 21.40625 8.242188 41.542969 23.359375 56.699219s35.234375 23.503906 56.640625 23.503906h145c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-145c-10.703125 0-20.761719-4.171875-28.320312-11.75-7.558594-7.578125-11.707032-17.648438-11.679688-28.402344v-10.609375c11.777344 6.828125 25.433594 10.761719 40 10.761719h149c4.445312 0 7.488281 2.761719 8.855469 5.34375 3.589843 6.777344 10.519531 10.644531 17.691406 10.644531 3.15625 0 6.359375-.746093 9.339844-2.328125 6.023437-3.1875 9.738281-9.015625 10.492187-15.300781.390625-1.558594.621094-3.179687.621094-4.859375v-265.5c0-22.054688 17.941406-40 40-40 29.195312 0 55.050781 1.644531 77.863281 3.09375 29.832031 1.898438 55.132813 3.507812 78.136719 1.011719v143.894531c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-168c0-6.28125-2.949219-12.195312-7.964844-15.976562zm-424.035156 307.976562c-22.054688 0-40-17.945312-40-40v-227.894531c23.003906 2.496093 48.300781.886719 78.132812-1.011719 22.816407-1.449219 48.671876-3.09375 77.867188-3.09375 22.054688 0 40 17.945312 40 40v232.492188c-2.296875-.324219-4.632812-.492188-7-.492188zm122-199c0 11.046875-8.953125 20-20 20h-87c-11.046875 0-20-8.953125-20-20s8.953125-20 20-20h87c11.046875 0 20 8.953125 20 20zm-30 80c0 11.046875-8.953125 20-20 20h-57c-11.046875 0-20-8.953125-20-20s8.953125-20 20-20h57c11.046875 0 20 8.953125 20 20zm237.589844 61.558594-109.800782 109.558594c-2.332031 2.328124-4.054687 5.195312-5.011718 8.347656l-23.914063 78.722656c-2.117187 6.980469-.269531 14.5625 4.820313 19.78125 3.816406 3.910156 9 6.035156 14.320312 6.035156 1.777344 0 3.574219-.238281 5.335938-.730468l80.726562-22.359376c3.320313-.921874 6.347656-2.683593 8.789063-5.121093l109.574219-109.363281c23.390624-23.394532 23.390624-61.460938 0-84.855469-23.394532-23.394531-61.460938-23.394531-84.839844-.015625zm-49.273438 162.207031-40.609375 11.25 11.882813-39.125 74.089844-73.925781 28.289062 28.289062zm105.839844-105.636719-3.875 3.867188-28.285156-28.285156 3.863281-3.851563c7.796875-7.800781 20.484375-7.800781 28.28125 0 7.800781 7.796875 7.800781 20.484375.015625 28.269531zm0 0" />
+            </symbol>
+
+
+            <!--Old SVG-->
+            <symbol viewBox="0 0 13 18" id="icon-play">
+                <title>play</title>
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+                </style>
+                <path class="st0" d="M0.5,0.1C0.4,0,0.3,0,0.2,0C0.1,0.1,0,0.2,0,0.3v17.4c0,0.1,0.1,0.2,0.2,0.3c0.1,0.1,0.2,0,0.3,0l12.4-8.7
+                                    C12.9,9.2,13,9.1,13,9c0-0.1,0-0.2-0.1-0.2L0.5,0.1z" />
+            </symbol>
+        </svg>
+    </div>
+
+    <script type='text/javascript' src='/Scripts/main.min.js'></script>
+    <script type='text/javascript' src='/Scripts/plugins/bj-lazy-load/js/bj-lazy-load.min77ae.js'></script>
+</body>
+</html>
